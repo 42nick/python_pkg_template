@@ -3,3 +3,51 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tools.isort]
+skip = [".gitignore", ".dockerignore"]
+skip_glob = ["docs/*"]
+profile = "black"
+line_length = 120
+
+[tool.black]
+line_length = 120
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.pytest_cache
+    | \.mypy_cache
+    | \.venv
+    | venv
+    | dist
+  )/
+)
+'''
+
+[tool.pylint.messages_control]
+max-line-length = 120
+disable = """
+    missing-function-docstring,
+    missing-module-docstring
+    """
+
+# [tool.pytest]
+# cov="python_pkg_template"
+# cov_report="html:reports/htm"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--cov=python_pkg_template --cov-branch --cov-report html:reports/html --cov-report=term-missing"
+
+[tool.coverage.html]
+directory = "reports/html"
+
+[tool.coverage.report]
+exclude_lines = [
+  "pragma: no cover",
+  "raise AssertionError",
+  "def __repr__",
+  "def __str__",
+  "if __name__ == .__main__.:",
+  "raise NotImplementedError",
+]
