@@ -2,7 +2,6 @@
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-
 [project]
 name = "python_pkg_template"
 version = "0.0.1"
@@ -11,10 +10,9 @@ requires-python = ">=3.7"
 license = { text = "MIT License" }
 dependencies = ["numpy"]
 [project.optional-dependencies]
-dev = ["python_pkg_template[test]", "python_pkg_template[doc]", "tox"]
+dev = ["python_pkg_template[test]", "python_pkg_template[docs]", "tox"]
 test = ["pytest", "pytest-cov", "coverage", "black", "isort", "pylint"]
 docs = ["sphinx"]
-
 
 [tool.setuptools.packages.find]
 where = ["src"] # list of folders that contain the packages (["."] by default)
@@ -58,10 +56,7 @@ disable = """
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov=python_pkg_template --cov-branch --cov-report html:reports/html --cov-report=term-missing"
-
-[tool.coverage.html]
-directory = "reports/html"
+addopts = "-v --cov=python_pkg_template --cov-branch --cov-report html:reports/html --cov-report=term-missing"
 
 [tool.coverage.report]
 exclude_lines = [
@@ -72,3 +67,7 @@ exclude_lines = [
   "if __name__ == .__main__.:",
   "raise NotImplementedError",
 ]
+
+[tool.coverage.run]
+branch = true
+data_file = "reports/.coverage"
