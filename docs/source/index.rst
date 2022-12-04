@@ -1,8 +1,3 @@
-.. python_pkg_template documentation master file, created by
-   sphinx-quickstart on Sun Dec  4 18:46:11 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to python_pkg_template's documentation!
 ===============================================
 
@@ -11,6 +6,7 @@ Welcome to python_pkg_template's documentation!
    :caption: Contents:
 
    installation
+   modules
 
 
 

@@ -12,7 +12,7 @@ dependencies = ["numpy"]
 [project.optional-dependencies]
 dev = ["python_pkg_template[test]", "python_pkg_template[docs]", "tox"]
 test = ["pytest", "pytest-cov", "coverage", "black", "isort", "pylint"]
-docs = ["sphinx", "myst-parser"]
+docs = ["sphinx", "myst-parser", "sphinx_better_theme"]
 
 [tool.setuptools.packages.find]
 where = ["src"] # list of folders that contain the packages (["."] by default)
