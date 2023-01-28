@@ -11,7 +11,6 @@ With [PEP 631](https://peps.python.org/pep-0631/) it becomes easily to add optio
 
 ## Building the docs
 ```
-sphinx-apidoc -f -o ./source/ ../src/python_pkg_template
 sphinx-build -b html docs/source docs/build
 ```
 

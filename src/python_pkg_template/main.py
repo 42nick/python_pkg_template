@@ -1,7 +1,7 @@
 from python_pkg_template.example_function import add_two_values
 
 
-def main():
+def main() -> None:
     """
     The core function of this awesome project.
     """
