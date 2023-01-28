@@ -8,20 +8,17 @@ version = "0.0.1"
 readme = "README.md"
 requires-python = ">=3.7"
 license = { text = "MIT License" }
-dependencies = ["numpy"]
+dependencies = []
 [project.optional-dependencies]
 dev = ["python_pkg_template[test]", "python_pkg_template[docs]", "tox"]
 test = ["pytest", "pytest-cov", "coverage", "black", "isort", "pylint"]
-docs = ["sphinx", "myst-parser", "sphinx_better_theme"]
+docs = ["sphinx", "myst-parser", "sphinx_rtd_theme"]
 
 [tool.setuptools.packages.find]
 where = ["src"] # list of folders that contain the packages (["."] by default)
 include = [
   "python_pkg_template*",
 ] # package names should match these glob patterns (["*"] by default)
-exclude = [
-  "my_package.tests*",
-] # exclude packages matching these glob patterns (empty by default)
 namespaces = false # to disable scanning PEP 420 namespaces (true by default)
 
 [tools.isort]

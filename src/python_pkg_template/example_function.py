@@ -1,7 +1,5 @@
 from typing import Union
 
-import numpy as np
-
 
 def add_two_values(val1: Union[int, float], val2: Union[int, float]) -> Union[int, float]:
     """
@@ -15,13 +13,3 @@ def add_two_values(val1: Union[int, float], val2: Union[int, float]) -> Union[in
         Union[int, float]: Sum of val1 and val2.
     """
     return val1 + val2
-
-
-def using_numpy() -> float:
-    """
-    Returns pi
-
-    Returns:
-        float: Contains the constant value of np.pi.
-    """
-    return np.pi
