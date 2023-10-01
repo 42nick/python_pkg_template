@@ -5,7 +5,8 @@ def main() -> None:
     """
     The core function of this awesome project.
     """
-    add_two_values(2, 3)
+    
+    print(f"Hello {add_two_values(2, 3)}")
 
 
 if __name__ == "__main__":
