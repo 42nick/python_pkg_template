@@ -1,12 +1,9 @@
-from python_pkg_template.example_function import add_two_values
-
-
 def main() -> None:
     """
     The core function of this awesome project.
     """
     
-    print(f"Hello {add_two_values(2, 3)}")
+    print(f"Hello world :)")
 
 
 if __name__ == "__main__":
